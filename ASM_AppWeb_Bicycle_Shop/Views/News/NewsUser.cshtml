@@ -4,39 +4,39 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div>
-    <div class="banner_section layout_padding">
-        <div id="main_slider" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <div class="container">
+
+@*<div class="banner_section layout_padding">*@
+<div id="main_slider" class="carousel slide here" data-ride="carousel" style="margin-top: -16px;" >
+        <div class="carousel-inner" style="width: 100%">
+            <div class="carousel-item active">
+                <div class="container" style="width: 100%">
+                    <img src="~/a/images/background1.png">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
                         <img src="~/a/images/background1.png">
                     </div>
                 </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <img src="~/a/images/background1.png">
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="container">
-                        <div class="row">
-                            <img src="~/a/images/background1.png">
-                        </div>
+            </div>
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <img src="~/a/images/background1.png">
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
-                <i class="fa fa-angle-left"></i>
-            </a>
-            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
-                <i class="fa fa-angle-right"></i>
-            </a>
         </div>
+@*        <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+        </a>
+        <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+        </a>*@
     </div>
-</div>
+@*</div>*@
+
 
 @*<div class="product_section layout_padding">*@
 <div class="container">
@@ -55,7 +55,7 @@
                                     <h2 class="speed_text">@i.NewsTitle</h2>
                                     <div class="post_text">Author : @i.NewsAuthor <span style="float: right;">@i.NewsDate</span></div>
 
-                                    <p class="long_text">@i.NewsContent</p>
+                                    <p class="long_text limitword-1">@i.NewsContent</p>
 
                                 </div>
                             </div>
@@ -70,3 +70,18 @@
     </div>
 </div>
 @*</div>*@
+
+<style>
+    .wrapper {
+        padding: 20px;
+        max-width: 400px;
+        margin: 50px auto;
+    }
+
+    .limitword-1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+</style>
