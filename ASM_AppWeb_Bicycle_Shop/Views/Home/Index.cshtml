@@ -167,7 +167,7 @@
                                     <h2 class="speed_text">@i.NewsTitle</h2>
                                     <div class="post_text">Author : @i.NewsAuthor <span style="float: right;">@i.NewsDate</span></div>
 
-                                    <p class="long_text">@i.NewsContent</p>
+                                    <p class="long_text limitword-1">@i.NewsContent</p>
 
                                 </div>
                             </div>
@@ -181,3 +181,14 @@
                 }
 
             </div>
+        </div>
+    </div>
+</div>
+<style>
+    .limitword-1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+</style>

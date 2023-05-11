@@ -66,8 +66,8 @@
                             <td>
                                 @Html.DisplayFor(modelItem => item.ProductPriceSale)
                             </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.ProductDecription)
+                            <td class="wrapper">
+                                <p class="limitword-1">@Html.DisplayFor(modelItem => item.ProductDecription)</p>
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.CategoryName)
@@ -91,3 +91,17 @@
     </div>
 </div>
 <!-- /.container-fluid -->
+<style>
+    .wrapper {
+        padding: 20px;
+        max-width: 400px;
+        margin: 50px auto;
+    }
+
+    .limitword-1 {
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+    }
+</style>
