@@ -51,7 +51,7 @@ namespace ASM_AppWeb_Bicycle_Shop.Controllers
             }
             else
             {
-                cartItem.Quantity += 1;
+                cartItem.Quantity += 1;  
             }
 
             HttpContext.Session.SetJson("Cart", cart);
